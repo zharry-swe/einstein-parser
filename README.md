@@ -7,5 +7,10 @@ Tool for parsing a config.txt file into a workable javascript object.
 2. Traverse to file directory
 3. run `npm run start`
 
-***Object should be printed out, access object properties via dot notation, square brackets, or destructuring***
+***Object 'configurationObject' should be printed out, access object properties via dot notation, square brackets, or destructuring***
+
+```
+configurationObject.host
+configurationObject.test_mode
+```
 
