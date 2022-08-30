@@ -1,0 +1,23 @@
+{
+  "name": "einstein-parser",
+  "version": "1.0.0",
+  "description": "parser to convert config.txt files into usable JS objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc parser.ts && node parser.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zharry-swe/einstein-parser.git"
+  },
+  "author": "Harry zhou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zharry-swe/einstein-parser/issues"
+  },
+  "homepage": "https://github.com/zharry-swe/einstein-parser#readme",
+  "devDependencies": {
+    "@types/node": "^18.7.14"
+  }
+}
