@@ -45,10 +45,12 @@ var convertToBool = function (object) {
     });
 };
 var parseConfigTextFile = function (fileLocation) {
-    var stringObject = generateConfigObject(generateKeyValues(omitConfigComments(readConfigFile(fileLocation))));
-    convertToNumbers(stringObject);
-    convertToBool(stringObject);
-    return stringObject;
+    var fileObject = generateConfigObject(generateKeyValues(omitConfigComments(readConfigFile(fileLocation))));
+    convertToNumbers(fileObject);
+    convertToBool(fileObject);
+    return fileObject;
 };
 var configurationObject = parseConfigTextFile('./config.txt');
-console.log(configurationObject.test_mode);
+console.log('Conversion Completed: \n');
+console.log(configurationObject);
+console.log("\nPlease use object how you see fit, AKA host: ".concat(configurationObject.host));

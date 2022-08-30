@@ -55,13 +55,18 @@ const convertToBool = (object: ConfigObject): void => {
 };
 
 const parseConfigTextFile = (fileLocation: string): ConfigObject => {
-    const stringObject = generateConfigObject(
+    const fileObject = generateConfigObject(
         generateKeyValues(omitConfigComments(readConfigFile(fileLocation)))
     );
-    convertToNumbers(stringObject);
-    convertToBool(stringObject);
-    return stringObject;
+    convertToNumbers(fileObject);
+    convertToBool(fileObject);
+    return fileObject;
 };
 
 const configurationObject = parseConfigTextFile('./config.txt');
+
+console.log('Conversion Completed: \n');
 console.log(configurationObject);
+console.log(
+    `\nPlease use object how you see fit, AKA host: ${configurationObject.host}`
+);
